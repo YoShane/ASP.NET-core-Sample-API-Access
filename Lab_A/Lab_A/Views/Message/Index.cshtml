@@ -1,0 +1,34 @@
+﻿@model Lab_A.Models.Message;
+@{
+    ViewData["Title"] = "Send Message Page";
+}
+
+
+
+
+<h1>Message app</h1>
+
+<h4 style="font-family:'Microsoft YaHei'">請於下方輸入要傳送的訊息</h4>
+
+<hr />
+<div class="row">
+    <div class="col-md-8">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Data" class="control-label"></label>
+                <input asp-for="Data" class="form-control" />
+                <span asp-validation-for="Data" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Send" class="btn btn-primary" />
+            </div>
+        </form>
+
+        <br>
+        <label asp-for="Confirmation" class="control-label"></label><input asp-for="Confirmation" class="form-control" style="font-family:'Microsoft YaHei';color:brown" disabled/>
+
+    </div>
+</div>
